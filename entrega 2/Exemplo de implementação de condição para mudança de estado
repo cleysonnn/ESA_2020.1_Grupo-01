@@ -1,0 +1,18 @@
+{mode==="DRIVING" ?
+<TouchableOpacity
+onPress={() =>setMode("DRIVING")}
+style={styles.modeButtomSelected}>
+    <Icon2 
+    name='drive-eta' 
+    size={30}
+    color={'#fff'}/>
+</TouchableOpacity> :
+<TouchableOpacity
+onPress={() =>setMode("DRIVING")}
+style={styles.modeButtom}>
+    <Icon2 
+    name='drive-eta' 
+    size={30}
+    color={'black'}/>
+</TouchableOpacity>
+}
