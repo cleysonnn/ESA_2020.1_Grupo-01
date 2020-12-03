@@ -8,31 +8,44 @@ const Snack = createStackNavigator();
 
 import CriacaoMetaDieta from './pages/criacao_meta_de_dieta';
 import CriacaoMetaDietaII from './pages/criacao_meta_de_dietaII';
+import MetaDieta from './pages/meta_dieta';
+
 import HomeScreen from './pages/home-screen';
 
-function SnackScreens(){
+
+function TabScreens(){
   return(
-    
-    
-    <Snack.Navigator screenOptions = {{headerShown:false}}>
-    
-      <Snack.Screen name='CriacaoMetaDieta' component={CriacaoMetaDieta}/>
-      <Snack.Screen name='CriacaoMetaDietaII' component={CriacaoMetaDietaII}/>
+
+    <Tab.Navigator>
+   
+ 
+ 
+        <Tab.Screen name='Home' component={HomeScreen}/>
 
 
-    </Snack.Navigator>);
+      </Tab.Navigator>
+  )
+    
+    
+    
   
 }
 
-export default function TabScreens(){
+export default function SnackScreens(){
   return(
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name='Home' component={HomeScreen}/>
-        <Snack.Screen name='nackScreens' component={SnackScreens} />
-        
-      </Tab.Navigator>
       
+      <Snack.Navigator screenOptions = {{headerShown:false}}>
+
+      
+        <Snack.Screen name='MetaDieta' component={MetaDieta}/>
+        <Snack.Screen name='TabScSnackns' component={TabScreens}/>
+        <Snack.Screen name='CriacaoMetaDieta' component={CriacaoMetaDieta}/>
+        <Snack.Screen name='CriacaoMetaDietaII' component={CriacaoMetaDietaII}/>
+        
+
+
+      </Snack.Navigator>
 
     </NavigationContainer>
   );

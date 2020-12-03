@@ -10,10 +10,10 @@ import React from 'react';
 import {View, Text} from 'react-native';
 
 
-import TabScreens from './src/routes'
+import SnackScreens from './src/routes'
 
 export default function App() {
   return (
-    <TabScreens/>
+    <SnackScreens />
   );
 }

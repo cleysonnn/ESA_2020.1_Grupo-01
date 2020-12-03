@@ -35,7 +35,10 @@ export default function CriacaoMetaDieta(){
   return(
   <View style={styles.container}>
     <View style={styles.topContainer}>
-      <AntDesignIcon name='left' size={30} color={'#A70069'}/>
+      <TouchableOpacity onPress={()=>{navigation.goBack()}}>
+        <AntDesignIcon name='left' size={30} color={'#A70069'}/>
+      
+      </TouchableOpacity>
     
     </View>
     

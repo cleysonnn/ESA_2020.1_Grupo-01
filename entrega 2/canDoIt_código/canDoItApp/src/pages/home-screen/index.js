@@ -10,7 +10,7 @@ export default function HomeScreen(){
   const navigation = useNavigation();
 
   function navigateToCriarMetaVicio(){
-    navigation.navigate('CriacaoMetaVicio');
+    navigation.navigate('CriacaoMetaDieta');
 
   }
 
