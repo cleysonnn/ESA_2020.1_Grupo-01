@@ -36,10 +36,9 @@ export default function SnackScreens(){
     <NavigationContainer>
       
       <Snack.Navigator screenOptions = {{headerShown:false}}>
-
-      
+        
         <Snack.Screen name='MetaDieta' component={MetaDieta}/>
-        <Snack.Screen name='TabScSnackns' component={TabScreens}/>
+        <Snack.Screen name='TabScreens' component={TabScreens}/>
         <Snack.Screen name='CriacaoMetaDieta' component={CriacaoMetaDieta}/>
         <Snack.Screen name='CriacaoMetaDietaII' component={CriacaoMetaDietaII}/>
         

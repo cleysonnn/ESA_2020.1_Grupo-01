@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 import AntDesignIcon from 'react-native-vector-icons/AntDesign'
@@ -29,6 +30,28 @@ export default function CriacaoMetaDietaII(){
 
   
   const [meta, setMeta] = React.useState(route.params);
+
+  const storeData = async () => {
+    try {
+      const jsonValue = JSON.stringify(meta)
+      await AsyncStorage.setItem('@storage_Key', jsonValue)
+    } catch (e) {
+      console.warn(e);
+    }
+  }
+
+  const getData = async () => {
+    try {
+      const jsonValue = await AsyncStorage.getItem('@storage_Key')
+      console.log(jsonValue != null ? JSON.parse(jsonValue) : null);
+    } catch(e) {
+      console.warn(e);
+    }
+  }
+
+  React.useEffect(()=>{
+    storeData()
+  },[])
 
 
   return(
@@ -83,7 +106,7 @@ export default function CriacaoMetaDietaII(){
 
     <TouchableOpacity
     onPress={()=>{
-      navigateToHome()
+      getData()
     }} 
     style={styles.buttom}>
     <Text style={styles.textButtom}>

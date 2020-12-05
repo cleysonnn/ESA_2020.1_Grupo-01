@@ -21,6 +21,7 @@ export default function CriacaoMetaDieta(){
 
   
   const [meta, setMeta] = React.useState({
+    tipo: 'dieta',
     objetivo: null,
     pesoAtual: 0,
     pesoEstimado: 0,
