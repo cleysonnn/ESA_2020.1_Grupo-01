@@ -9,18 +9,29 @@ import {useNavigation} from '@react-navigation/native';
 export default function HomeScreen(){
   const navigation = useNavigation();
 
-  function navigateToCriarMetaVicio(){
+  function navigateToCriarMetaDieta(){
     navigation.navigate('CriacaoMetaDieta');
+
+  }
+  function navigateToMetaVicio(){
+    navigation.navigate('MetaDieta');
 
   }
 
   return(
     <View>
-      <TouchableOpacity onPress={()=>{navigateToCriarMetaVicio()}}>
+      <TouchableOpacity onPress={()=>{navigateToCriarMetaDieta()}}>
         <Text>
-          criar meta
+          criar meta dieta
         </Text>
       </TouchableOpacity>
+
+      <TouchableOpacity onPress={()=>{navigateToMetaVicio()}}>
+        <Text>
+          criar meta dieta
+        </Text>
+      </TouchableOpacity>
+
     </View>
   )
 }

@@ -11,6 +11,7 @@ import CriacaoMetaDietaII from './pages/criacao_meta_de_dietaII';
 import MetaDieta from './pages/meta_dieta';
 
 import HomeScreen from './pages/home-screen';
+import MetaDietaPersonalizada from './pages/meta_dieta_personalizada';
 
 
 function TabScreens(){
@@ -36,7 +37,7 @@ export default function SnackScreens(){
     <NavigationContainer>
       
       <Snack.Navigator screenOptions = {{headerShown:false}}>
-        
+        <Snack.Screen name='MetaDietaPersonalizada' component={MetaDietaPersonalizada}/>
         <Snack.Screen name='MetaDieta' component={MetaDieta}/>
         <Snack.Screen name='TabScreens' component={TabScreens}/>
         <Snack.Screen name='CriacaoMetaDieta' component={CriacaoMetaDieta}/>

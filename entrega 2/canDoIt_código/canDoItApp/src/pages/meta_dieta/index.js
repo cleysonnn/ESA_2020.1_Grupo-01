@@ -172,6 +172,7 @@ export default function MetaDieta(){
                 data={conquistas}
                 horizontal
                 showsHorizontalScrollIndicator={false}
+                keyExtractor={item => item.id.toString()}
                 contentContainerStyle={styles.conquistaContainer}
                 renderItem={({item})=>(
                     <View style={styles.conquista}>
@@ -180,7 +181,7 @@ export default function MetaDieta(){
                             <Text>
                                 {item.nome}
                             </Text>
-                        </View>
+                    </View>
                 )}
                 
                 />
