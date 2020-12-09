@@ -48,6 +48,7 @@ export default StyleSheet.create ({
     
         textProsseguir: {
             fontSize: 23,
+            marginLeft: 100,
             bottom: 47,
             color: '#ffff'
         }

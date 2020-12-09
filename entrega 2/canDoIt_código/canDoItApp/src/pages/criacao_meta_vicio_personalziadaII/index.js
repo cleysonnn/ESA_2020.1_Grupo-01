@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View,Text,Image,StyleSheet } from 'react-native';
+import { View,Text,Image,TouchableOpacity } from 'react-native';
 
 import arrowBack from '../../assets/assets/arrowBack.png';
 import iconeMetaVicio from '../../assets/assets/iconeVicio.png';
@@ -13,14 +13,25 @@ import styles from './style';
 export default function MetaVicioPersonalizada2() {
     return(
     <View style={styles.container}>
-        <Image source={arrowBack} style={styles.arrowBack}/>
+        <TouchableOpacity>
+            <Image source={arrowBack} style={styles.arrowBack}/>
+        </TouchableOpacity>
+        
         <Image source={iconeMetaVicio} style={styles.iconeMetaVicio}/>
         <Text style={styles.textVicio}>VÍCIO</Text>
         <Text style={styles.textQualSeuObjetivo}>Deseja selecionar algumas tarefas para ajudar em seu objetivo?</Text>
-        <Image source={backgroundIcon} style={styles.backgroundIcon}/>
-        <Image source={iconPlus} style={styles.iconPlus}/>
-        <Image source={prosseguirBackground} style={styles.prosseguirBackground} />
-        <Text style={styles.textProsseguir}>Prosseguir</Text>
+        
+        <TouchableOpacity>
+            <Image source={backgroundIcon} style={styles.backgroundIcon}/>
+            <Image source={iconPlus} style={styles.iconPlus}/>
+        </TouchableOpacity>
+        
+
+        <TouchableOpacity>
+            <Image source={prosseguirBackground} style={styles.prosseguirBackground} />
+            <Text style={styles.textProsseguir}>Prosseguir</Text>
+        </TouchableOpacity>
+        
     </View>
 
     );

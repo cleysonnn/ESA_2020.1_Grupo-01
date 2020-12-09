@@ -19,7 +19,7 @@ export default StyleSheet.create ({
         },
         textFinanceira: {
             marginTop: 28,
-            marginBottom: 60,
+            marginBottom: 50,
             fontWeight: 'bold',
             fontSize: 20
         },
@@ -38,7 +38,7 @@ export default StyleSheet.create ({
         financeiraFormBackground: {
             height:  40,
             width: 258,
-            marginBottom: 40
+            marginBottom: 15
         },
         prosseguirBackground: {
             marginTop: 40,
@@ -48,6 +48,7 @@ export default StyleSheet.create ({
     
         textProsseguir: {
             fontSize: 23,
+            marginLeft: 100,
             bottom: 47,
         }
 

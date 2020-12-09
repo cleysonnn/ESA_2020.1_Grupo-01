@@ -1,38 +1,43 @@
 import {StyleSheet} from 'react-native';
+import Constants from 'expo-constants';
 
 
 
 export default StyleSheet.create ({
         container: {
             flex: 1,
-            alignItems: 'center'
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginTop: Constants.statusBarHeight,
         }, 
+        ScrollView: {
+        },  
     
         header: {
-            top: 25,
             height: 80,
-            width: 400,
+            width: 414,
             borderBottomEndRadius: 40,
             borderBottomStartRadius: 40,
             backgroundColor: '#A70069',
-            justifyContent: 'center',
             alignItems: 'center'
         },
         arrowBack: {
             top: 20,
-            right: 165
+            right: 180
             
         },
     
         engrenagem: {
             width: 40,
             height: 40,
-            left: 158,
+            left: 160,
             bottom: 15
         },
     
         viewInicial: {
-            marginTop: 50,
+            marginTop: 30,
+            width: 414,
+            justifyContent: 'center',
             alignItems: 'center',
             flexDirection: 'column'
         },
@@ -47,103 +52,116 @@ export default StyleSheet.create ({
             fontSize: 25
         },
         viewMid: {
+            width: 414,
             marginTop: 18,
             width: '100%',
-            flexDirection: 'row'
+            flexDirection: 'row',
+            justifyContent: 'center',
         },
         viewMidLeft: {
-            width: '50%',
+            width: 212,
+            left: 50,
+            justifyContent: 'center',
         },
         textMidLeft: {
             fontWeight: 'bold',
             fontSize: 19,
             marginBottom: 30,
-            marginLeft: 30
     
         },
         viewMidRight: {
-            width: '50%',
+            width: 212,
             flexDirection: 'row',
             justifyContent: 'center',
+            left: 20
         },
         numConquistas: {
             fontWeight: 'bold',
             fontSize: 19,
             top: 10,
-            marginLeft: 80
+            marginLeft: 90
     
         },
         conquistasIcon: {
+            bottom: 7,
             marginLeft: 15,
-            height: 50,
-            width: 50,
+            height: 40,
+            width: 40,
         },
         viewMidRightBottom: {
             width: 100,
             height: 50,
             right: '83.5%',
+            justifyContent: 'center',
             top: '12.5%'
         },
         textMidRight: {
             fontWeight: 'bold',
             fontSize: 19,
-            top: 10
+            bottom: 17,
+            left: 12
         },
         statusbar: {
-            width: '85%'
+            marginLeft: 22,
+            width: 370,
+            height: 30
         },
         viewForms: {
             flexDirection: 'row',
+            height: 100
     
         },
     
         formBackground: {
-            marginLeft: 10,
+            marginLeft: 20,
             marginTop: 10,
             marginBottom: 5,
-            width: '46%',
+            width: 177,
             //width: 174,
             height: 28.9,
     
         },
     
         buttonBackground: {
-            marginLeft: 10,
-            width: '46%',
+            marginLeft: 20,
+            width: 177,
            //width: 174,
             marginBottom: 7,
+            bottom: 50
     
         },
         buttonLabelAdd: {
-            right: 94,
+            left: 45,
             fontSize: 20,
-            bottom: 37
+            bottom: 85
     
         },
         buttonLabelRem: {
-            left: 94,
+            left: 50,
             fontSize: 20,
-            bottom: 65
+            bottom: 87
         },
         buttonBackgroundEncerrar: {
-            width: '46%',
-            bottom: 50,
+            width: 177,
+            left: 115,
+            bottom:110,
         },
         labelEncerrar: {
             fontSize: 20,
-            bottom: 79
+            left: 140,
+            bottom: 139.5
         },
         viewConquistas: {
-            bottom: 65,
+            bottom: 90,
             flexDirection: 'column',
-            width: '100%',
-            height: '15%',
+            width: 414,
+            height: 100,
         },
         viewTrofeus: {
             flexDirection: 'row',
             justifyContent:'center',
-            height: '80%',
-            width: '100%',
+            height: 100,
+            width: 414,
         },
         trofeu: {
             height: '100%',
@@ -154,7 +172,8 @@ export default StyleSheet.create ({
         viewTextTrofeus: {
             flexDirection: 'row',
             height: '20%',
-            width:'100%'
+            width:'100%',
+            marginBottom: 10
         },
         textTrofeus10: {
             fontSize: 19,
@@ -170,13 +189,14 @@ export default StyleSheet.create ({
         },
         viewCancelar: {
             alignItems: 'center',
-            marginTop: 21
+            height: 100,
+            marginBottom: 30
         },
         backgroundButtonCancelar: {
-    
         },
         textBackgroundCancelar: {
             fontSize: 19,
-            bottom: 29
+            bottom: 29,
+            left: 33
         }
 })

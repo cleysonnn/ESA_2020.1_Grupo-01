@@ -1,28 +1,18 @@
 import {StyleSheet} from 'react-native';
+import Constants from 'expo-constants';
 
 
 
 export default StyleSheet.create ({
-    container: {
-        flex: 1,
-        //justifyContent: 'center',
+    safearea:{
+        flex:1,
+        marginTop: Constants.statusBarHeight,
         alignItems: 'center'
-    },
-
-    container2: {
-        flex: 2,
-        alignItems: 'center'
-    },
-
-    container3: {
-        flex: 3,
-        flexDirection: "row"
     },
 
     header: {
-        top: 25,
         height: 136,
-        width: 400,
+        width: 414,
         borderBottomEndRadius: 40,
         borderBottomStartRadius: 40,
         backgroundColor: '#A70069',
@@ -38,7 +28,7 @@ export default StyleSheet.create ({
     },
 
     minhasMetas: {
-        top: 163,
+        top: 10,
         width: 400,
         height: 80,
         flexDirection: "row",
@@ -74,7 +64,7 @@ export default StyleSheet.create ({
         alignItems: 'center',
         //backgroundColor:'#ff007f',
         height: 430,
-        top: 141,
+        bottom: 50,
         alignItems: 'center'
 
     },
@@ -97,7 +87,7 @@ export default StyleSheet.create ({
         backgroundColor: '#EDEDED',
         height: 100,
         width: 400,
-        top: 658,
+        bottom: 80,
         borderTopEndRadius: 40,
         borderTopStartRadius: 40,
         flexDirection: "row"

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { CheckBox,View,Text,Image,StyleSheet } from 'react-native';
+import { TouchableOpacity,View,Text,Image,StyleSheet } from 'react-native';
 
 import arrowBack from '../../assets/assets/arrowBack.png';
 import iconeMetaFinanceira from '../../assets/assets/iconeMetaFinanceira.png';
@@ -10,7 +10,10 @@ export default function MetaFinanceira2() {
 
     return(
     <View style={styles.container}>
-        <Image source={arrowBack} style={styles.arrowBack}/>
+        <TouchableOpacity>
+            <Image source={arrowBack} style={styles.arrowBack}/>
+        </TouchableOpacity>
+        
         <Image source={iconeMetaFinanceira} style={styles.iconeMetaFinanceira}/>
         <Text style={styles.textFinanceira}>FINANCEIRA</Text>
 
@@ -21,8 +24,11 @@ export default function MetaFinanceira2() {
             <Image source={financeiraFormBackground} style={styles.financeiraFormBackground}/>
         </View>
 
-        <Image source={prosseguirBackground} style={styles.prosseguirBackground}/>
-        <Text style={styles.textProsseguir}>Prosseguir</Text>
+        <TouchableOpacity>
+            <Image source={prosseguirBackground} style={styles.prosseguirBackground}/>
+            <Text style={styles.textProsseguir}>Prosseguir</Text>
+        </TouchableOpacity>
+        
     </View>
 
     );

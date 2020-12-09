@@ -1,12 +1,14 @@
 import {StyleSheet} from 'react-native';
-
+import Constants from 'expo-constants';
 
 
 export default StyleSheet.create ({
     container: {
         flex: 1,
-        //alignItems: 'center'
-    },
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: Constants.statusBarHeight,
+    }, 
 
     arrowBack: {
         top: 50,
@@ -22,6 +24,10 @@ export default StyleSheet.create ({
         top: 72,
         fontSize: 28,
         color: '#A70069'
+    },
+
+    viewPrincipal: {
+        
     },
 
     viewVicio: {

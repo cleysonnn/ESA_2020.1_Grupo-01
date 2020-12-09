@@ -35,7 +35,8 @@ export default StyleSheet.create ({
             marginTop: 15,
         },
         iconPlus: {
-            bottom: 24
+            bottom: 24,
+            marginLeft: 7
         },
         prosseguirBackground: {
             marginTop: 40,
@@ -46,6 +47,7 @@ export default StyleSheet.create ({
         textProsseguir: {
             fontSize: 23,
             bottom: 47,
+            marginLeft: 100,
             color: '#ffff'
         }
 })

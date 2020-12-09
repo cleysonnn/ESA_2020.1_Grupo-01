@@ -27,28 +27,23 @@ export default function MetaFinanceira() {
 
     return(
     <View style={styles.container}>
-        <Image source={arrowBack} style={styles.arrowBack}/>
+        <TouchableOpacity>
+            <Image source={arrowBack} style={styles.arrowBack}/>
+        </TouchableOpacity>
+        
         <Image source={iconeMetaFinanceira} style={styles.iconeMetaFinanceira}/>
          <Text style={styles.textFinanceira}>FINANCEIRA</Text>
         <Text style={styles.textQualSeuObjetivo}>Qual seu objetivo?</Text>
 
         <View style={styles.checkboxContainer}>
-            <CheckBox
-                value={isSelected}
-                onValueChange={setSelection}
-                style={styles.checkbox}
-            />
             <Text style={styles.textEconomizar}>Economizar</Text>
-            <CheckBox
-                value={isSelected}
-                onValueChange={setSelection}
-                style={styles.checkbox}
-            />
             <Text style={styles.textAcumular}>Acumular</Text>
         </View>
-
-        <Image source={prosseguirBackground} style={styles.prosseguirBackground}/>
-        <Text style={styles.textProsseguir}>Prosseguir</Text>
+        <TouchableOpacity>
+            <Image source={prosseguirBackground} style={styles.prosseguirBackground}/>
+            <Text style={styles.textProsseguir}>Prosseguir</Text>
+        </TouchableOpacity>
+        
     </View>
 
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View,Text,Image,StyleSheet } from 'react-native';
+import { View,Text,Image,ScrollView,TouchableOpacity,SafeAreaView } from 'react-native';
 
 import engrenagem from '../../assets/assets/engrenagem.png';
 import filtrar from '../../assets/assets/filtrar.png';
@@ -12,11 +12,16 @@ import styles from './style';
 
 export default function MainScreen() {
     return (
-    <View>
+    <View style={styles.safearea}>
+        
+        
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.textInicial}>nome, Bem Vindo!</Text>
-                <Image source={engrenagem} style={styles.engrenagem} />
+                <TouchableOpacity>
+                    <Image source={engrenagem} style={styles.engrenagem} />
+                </TouchableOpacity>
+                
             </View>
         </View>
 
@@ -26,8 +31,10 @@ export default function MainScreen() {
             <View style={styles.minhasMetas}>
                 <Text style={styles.textMinhasMetas}>Minhas metas  </Text> 
                 <Text style={styles.textMinhasMetas}>(0)</Text>
-                {/* colocar um button */}
-                <Image source={filtrar} style={styles.filtrar}/>
+                <TouchableOpacity>
+                    <Image source={filtrar} style={styles.filtrar}/>
+                </TouchableOpacity>
+                
             </View>
 
 
@@ -35,7 +42,10 @@ export default function MainScreen() {
 
             <View style={styles.mid}>
                 <Text style={styles.textMetaCriada}>Nenhuma meta criada, por favor criar uma meta no Ícone abaixo</Text>
-                <Image source={target} style={styles.target}/>
+                <TouchableOpacity>
+                    <Image source={target} style={styles.target}/>
+                </TouchableOpacity>
+                
             </View>    
         </View>
 
@@ -45,17 +55,23 @@ export default function MainScreen() {
                 <Image source={metaTarget} style ={styles.metaTarget}/>
 
                 <View style={styles.viewConcluidos}>
-                     <Image source={concluidos} style ={styles.concluidos}/>
-                    <Text style ={styles.textConcluidos}>Concluídos</Text>
+                    <TouchableOpacity>
+                        <Image source={concluidos} style ={styles.concluidos}/>
+                        <Text style ={styles.textConcluidos}>Concluídos</Text>
+                    </TouchableOpacity>
+                     
                 </View>
 
                 <View style={styles.viewConcluidos}>
-                    <Image source={conquistas} style ={styles.conquistas}/>
-                    <Text style ={styles.textConquistas}>Conquistas</Text>
+                    <TouchableOpacity>
+                        <Image source={conquistas} style ={styles.conquistas}/>
+                        <Text style ={styles.textConquistas}>Conquistas</Text>
+                    </TouchableOpacity>
                 </View>
 
             </View>
         </View>
     </View>
+    
     );
 }
