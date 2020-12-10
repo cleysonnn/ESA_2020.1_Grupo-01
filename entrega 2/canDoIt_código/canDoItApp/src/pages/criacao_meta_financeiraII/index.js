@@ -17,7 +17,7 @@ export default function MetaFinanceira2() {
 
     }
     function navigateToNextStep(){
-        navigation.navigate('MainScreen');
+        navigation.navigate('MainScreenII');
 
     }
 

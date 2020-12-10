@@ -9,8 +9,16 @@ import prosseguirBackground from '../../assets/assets/backgroundProsseguirVicio.
 import iconPlus from '../../assets/assets/plusIcon.png';
 import backgroundIcon from '../../assets/assets/backgroundPlus.png';
 import styles from './style';
+import {useNavigation} from '@react-navigation/native';
 
 export default function MetaVicioPersonalizada2() {
+    
+    const navigation = useNavigation();
+
+    function navigateToNextStep(){
+        navigation.navigate('MainScreenCardIV');
+
+    }
     return(
     <View style={styles.container}>
         <TouchableOpacity>
@@ -27,7 +35,7 @@ export default function MetaVicioPersonalizada2() {
         </TouchableOpacity>
         
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>{navigateToNextStep()}}>
             <Image source={prosseguirBackground} style={styles.prosseguirBackground} />
             <Text style={styles.textProsseguir}>Prosseguir</Text>
         </TouchableOpacity>

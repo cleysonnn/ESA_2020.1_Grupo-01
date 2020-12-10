@@ -6,8 +6,17 @@ import iconeMeta from '../assets/assetsB/metaExec.png';
 import prosseguirBackground from '../assets/assetsB/backgroundProsseguirExec.png';
 import backGroundPlus from '../assets/assetsB/backGroundPlus.png';
 import plus from '../assets/assetsB/plus.png';
+import {useNavigation} from '@react-navigation/native';
+
+
 export default function MetaFinanceiraPersonalizada1() {
     const [isSelected, setSelection] = useState(false);
+
+    const navigation = useNavigation();
+    function navigateToNextStep(){
+        navigation.navigate('CriacaoMetaExercicioII');
+    }
+
     return (
         <View style={styles.container}>
             <TouchableOpacity style={styles.buttonBack}>
@@ -76,7 +85,7 @@ export default function MetaFinanceiraPersonalizada1() {
                     <Image source={plus} style={styles.plus} />
                 </TouchableOpacity>
             </View>
-            <TouchableOpacity style={styles.buttonProsseguir}>
+            <TouchableOpacity onPress={()=>{navigateToNextStep()}} style={styles.buttonProsseguir}>
                 <Text style={styles.buttonTextProsseguir}>Prosseguir</Text>
             </TouchableOpacity>
         </View>

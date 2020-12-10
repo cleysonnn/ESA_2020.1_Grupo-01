@@ -78,7 +78,7 @@ export default function EscolhaMeta() {
                         </View>
                     </TouchableOpacity>
                 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>{navigateToMetaExercicio()}}>
                         <View style={styles.viewExercicios}>
                             <Image source={backgroundExercicios} style={styles.backgroundExercicios}/>
                             <Image source={iconeExercicios} style={styles.iconeExercicios}/>

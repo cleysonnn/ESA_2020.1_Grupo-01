@@ -5,8 +5,16 @@ import arrowBack from '../assets/assetsB/buttonBack.png';
 import iconeMeta from '../assets/assetsB/metaExec.png';
 import plus from '../assets/assetsB/plus.png';
 import backgroundPlus from '../assets/assetsB/backGroundPlus.png';
+import {useNavigation} from '@react-navigation/native';
+
 
 export default function MetaPersonalizadaExec2() {
+
+    const navigation = useNavigation();
+    function navigateToNextStep(){
+        navigation.navigate('MainScreenCardIII');
+    }
+
     return (
         <View style={styles.container}>
             <TouchableOpacity style={styles.buttonBack}>
@@ -19,7 +27,7 @@ export default function MetaPersonalizadaExec2() {
                 <Image source={backgroundPlus} style={styles.backgroundPlus} />
                 <Image source={plus} style={styles.plus} />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.buttonProsseguir}>
+            <TouchableOpacity onPress={()=>{navigateToNextStep()}} style={styles.buttonProsseguir}>
                 <Text style={styles.buttonTextProsseguir}>Prosseguir</Text>
             </TouchableOpacity>
         </View>
