@@ -1,46 +1,85 @@
-import React, {useState} from 'react';
-import {View,Text,Image, TouchableOpacity } from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import React, { useState } from 'react';
+import {View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
-import arrowBack from '../../assets/assets/arrowBack.png';
-import iconeMetaFinanceira from '../../assets/assets/iconeMetaFinanceira.png';
-import prosseguirBackground from '../../assets/assets/prosseguirBackground.png';
-
+import arrowBack from '../../assets/assetsB/buttonBack.png';
+import iconeMeta from '../../assets/assetsB/MetaFinanceira.png';
 import styles from './style';
 
+
+
 export default function MetaFinanceira() {
-     
-    const navigation = useNavigation();
 
-    function navigateToPrevious(){
-        navigation.navigate('MainScreen');
+    const unSelectedOptionIconSource = '../../assets/assetsB/unchecked.png';
+    const selectedOptionIconSource = '../../assets/assetsB/selected.png';
 
-    }
-    function navigateToNextStep(){
-        navigation.navigate('CriacaoMetaFinanceiraII');
+    const [meta, setMeta] = React.useState({
+        tipo: 'dieta',
+        objetivo: null,
+        pesoAtual: 0,
+        pesoEstimado: 0,
+    });
 
-    }
+    return (
+        <View style={styles.container}>
+            <TouchableOpacity style={styles.buttonBack}>
+                <Image source={arrowBack} />
+            </TouchableOpacity>
+            <Image source={iconeMeta} style={styles.MetaFinanceira} />
+            <Text style={styles.textMeta}>FINANCEIRA</Text>
+            <Text style={styles.textQualSeuObjetivo}>Qual seu objetivo?</Text>
+            <View style={styles.optionContainer}>
+                <TouchableOpacity
+                    style={styles.option}
+                    onPress={() => {
+                        if (meta.objetivo === 'Economizar') {
+                            setMeta({
+                                objetivo: null,
 
-    return(
-    <View style={styles.container}>
-        <TouchableOpacity onPress={()=>{navigateToPrevious()}}>
-            <Image source={arrowBack} style={styles.arrowBack}/>
-        </TouchableOpacity>
-        
-        <Image source={iconeMetaFinanceira} style={styles.iconeMetaFinanceira}/>
-         <Text style={styles.textFinanceira}>FINANCEIRA</Text>
-        <Text style={styles.textQualSeuObjetivo}>Qual seu objetivo?</Text>
+                            })
 
-        <View style={styles.checkboxContainer}>
-            <Text style={styles.textEconomizar}>Economizar</Text>
-            <Text style={styles.textAcumular}>Acumular</Text>
-        </View>
-        <TouchableOpacity onPress={()=>{navigateToNextStep()}}>
-            <Image source={prosseguirBackground} style={styles.prosseguirBackground}/>
-            <Text style={styles.textProsseguir}>Prosseguir</Text>
-        </TouchableOpacity>
-        
-    </View>
+
+                            return;
+                        }
+                        setMeta({
+                            objetivo: 'Economizar'
+                        });
+                    }}>
+                    {meta.objetivo === 'Economizar' ?
+                        <Image source={require(selectedOptionIconSource)} style={styles.optionMarkerSize} />
+                        :
+                        <Image source={require(unSelectedOptionIconSource)} style={styles.optionMarkerSize} />
+                    }
+                    <Text style={styles.textOption}> Economizar</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={styles.option}
+                    onPress={() => {
+                        if (meta.objetivo === 'Acumular') {
+                            setMeta({
+                                objetivo: null,
+
+                            })
+                            return;
+                        }
+                        setMeta({
+                            objetivo: 'Acumular'
+                        });
+                    }}>
+                    {meta.objetivo === 'Acumular' ?
+                        <Image source={require(selectedOptionIconSource)} style={styles.optionMarkerSize} />
+                        :
+                        <Image source={require(unSelectedOptionIconSource)} style={styles.optionMarkerSize} />
+                    }
+
+                    <Text style={styles.textOption}> Acumular</Text>
+
+                </TouchableOpacity>
+            </View>
+            <TouchableOpacity style={styles.buttonProsseguir}>
+                <Text style={styles.buttonTextProsseguir}>Prosseguir</Text>
+            </TouchableOpacity>
+        </View >
 
     );
 }

@@ -2,55 +2,84 @@ import {StyleSheet} from 'react-native';
 
 
 
-export default StyleSheet.create ({
+
+export default StyleSheet.create({
     container: {
         flex: 1,
-        flexDirection: 'column', 
+        flexDirection: 'column',
         alignItems: 'center'
     },
-    checkboxContainer: {
-        flexDirection: 'row',
-        marginTop: 50
-    },
-    checkbox: {
-    },
-    textEconomizar: {
-        fontSize: 22,
-        marginRight: 50
-    },
-    textAcumular: {
-        fontSize: 22
+    optionContainer: {
+        width: 330,
+        justifyContent: "space-between",
+        marginBottom: 29,
+        flexDirection: "row",
+
     },
     arrowBack: {
         top: 30,
         right: 170
     },
-    iconeMetaFinanceira: {
+    iconeMeta: {
         marginTop: 50,
-        height:115,
-        width:115,
+        height: 115,
+        width: 115,
+        backgroundColor: "#fff",
     },
-    textFinanceira: {
-        marginTop: 28,
-        fontWeight: 'bold',
-        fontSize: 20
+    textMeta: {
+        color: '#000',
+        fontWeight: '400',
+        fontSize: 20,
+        textAlign: "center",
+        marginBottom: 53,
+
     },
+    option: {
+        alignContent: "center",
+        justifyContent: "center",
+        flexDirection: "row",
+    },
+    textOption: {
+        fontSize: 20,
+        fontWeight: '400',
+        color: '#000',
+
+    },
+    textAcumular: {
+        fontSize: 22,
+        color: '#000000'
+    },
+
     textQualSeuObjetivo: {
-        fontWeight: 'bold',
-        fontSize: 23,
-        marginTop: 30
+        width: '100%',
+        textAlign: "center",
+        fontSize: 20,
+        fontWeight: '400',
+        marginBottom: 27,
 
     },
-    prosseguirBackground: {
-        marginTop: 40,
-        height: 58,
-        width: 310
+
+
+    buttonProsseguir: {
+        width: 254,
+        height: 48,
+        borderRadius: 20,
+        backgroundColor: '#FFE32E',
+        justifyContent: "center",
+        alignItems: "center",
     },
 
-    textProsseguir: {
-        fontSize: 23,
-        marginLeft: 100,
-        bottom: 47,
-    }
+    buttonTextProsseguir: {
+        fontSize: 20,
+        fontWeight: '400',
+        color: '#000000'
+    },
+
+    buttonBack: {
+        top: 15,
+        alignSelf: 'flex-start',
+        marginTop: 10
+    },
+
 
 })
