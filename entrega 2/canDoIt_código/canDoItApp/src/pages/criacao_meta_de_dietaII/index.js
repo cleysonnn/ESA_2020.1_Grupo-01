@@ -22,7 +22,7 @@ export default function CriacaoMetaDietaII(){
   const navigation = useNavigation();
 
   function navigateToHome(){
-    navigation.navigate('CriacaoMetaDietaII');
+    navigation.navigate('MainScreenCard');
   }
 
   const route = useRoute();
@@ -107,6 +107,7 @@ export default function CriacaoMetaDietaII(){
     <TouchableOpacity
     onPress={()=>{
       getData()
+      navigateToHome()
     }} 
     style={styles.buttom}>
     <Text style={styles.textButtom}>
