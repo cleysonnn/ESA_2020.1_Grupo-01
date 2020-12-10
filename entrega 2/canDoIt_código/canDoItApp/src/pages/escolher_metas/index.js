@@ -8,6 +8,7 @@ import iconeDieta from '../../assets/assets/iconeDieta.png';
 import iconeFinanceiro from '../../assets/assets/iconeFinanceiro.png';
 import iconeExercicios from '../../assets/assets/iconeExercicios.png';
 import backgroundExercicios from '../../assets/assets/backgroundExercicios.png';
+import iconePersonalizada from '../../assets/assets/iconePersonalizado.png';
 import {useNavigation} from '@react-navigation/native';
 
 import styles from './style';
