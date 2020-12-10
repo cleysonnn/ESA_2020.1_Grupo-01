@@ -8,10 +8,12 @@ import metaTarget from '../../assets/assets/metaTarget.png';
 import concluidos from '../../assets/assets/concluidos.png';
 import conquistas from '../../assets/assets/conquistas.png';
 import {useNavigation} from '@react-navigation/native';
+import card from '../../assets/assets/dietaCard.png';
+
 
 import styles from './style';
 
-export default function MainScreen() {
+export default function MainScreenCard() {
 
     const navigation = useNavigation();
 

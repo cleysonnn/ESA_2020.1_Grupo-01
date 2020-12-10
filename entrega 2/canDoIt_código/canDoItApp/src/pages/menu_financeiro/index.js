@@ -12,9 +12,16 @@ import trofeu from '../../assets/assets/trofeu.png';
 import backgroundButtonCancelar from '../../assets/assets/backgroundButtonCancelar.png';
 import styles from './style';
 
+import {useNavigation} from '@react-navigation/native';
+
 export default function MenuFinanceiro() {
 
     const navigation = useNavigation();
+
+function navigateToMainScreen(){
+    alert("meta encerrada")
+    navigation.navigate('MainScreen');
+}
 
     function navigateToMainScreenCard(){
         navigation.navigate('MainScreenCard');
@@ -24,8 +31,8 @@ export default function MenuFinanceiro() {
             <SafeAreaView style={styles.container}>
                 <ScrollView style={styles.ScrollView}>
                     <View style={styles.header}>
-                        <TouchableOpacity>
-                            <Image source={arrowBack} style={styles.arrowBack}  onPress={()=>{navigateToMainScreenCard()}}/>
+                        <TouchableOpacity onPress={()=>{navigateToMainScreenCard()}}>
+                            <Image source={arrowBack} style={styles.arrowBack}  />
                         </TouchableOpacity>
                         
                         <TouchableOpacity>
@@ -79,9 +86,11 @@ export default function MenuFinanceiro() {
                             </TouchableOpacity>
                             
                         </View>
-                        <TouchableOpacity style={styles.buttonBackgroundEncerrar}>
+                        <TouchableOpacity style={styles.buttonBackgroundEncerrar} onPress={()=>{navigateToMainScreen()} }>
                                 <Image source={buttonBackground} />
                                 <Text style={styles.labelEncerrar}>Encerrar Meta</Text>
+                                
+                                 
                         </TouchableOpacity>
                     </View>
     
