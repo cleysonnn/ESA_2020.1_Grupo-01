@@ -141,4 +141,25 @@ export default StyleSheet.create ({
         
 
     },
+    viewPersonalizada: {
+        justifyContent: 'center',
+        flexDirection: 'row',
+        width: 395,
+        height: 115,
+        backgroundColor: '#D9D9D9',
+        marginBottom: 20
+    },
+    iconePersonalizada: {
+        height: 112,
+        width:112,
+        top: 1.5,
+        right: 41
+    },
+    textPersonalizada: {
+        fontSize: 19,
+        width: 170,
+        top: 12,
+        right: 20,
+        color: '#696969'
+    }
 })

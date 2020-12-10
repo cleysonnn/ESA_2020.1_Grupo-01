@@ -86,6 +86,15 @@ export default function EscolhaMeta() {
                         </View>
 
                     </TouchableOpacity>
+                    
+                    <TouchableOpacity>
+                        <View style={styles.viewPersonalizada}>
+                            <Image source={iconePersonalizada} style={styles.iconePersonalizada}/>
+                            <Text style={styles.textPersonalizada}>Meta Personalizada</Text>
+                        
+                        </View>
+
+                    </TouchableOpacity>
                     <View>
                 </View>
                 </View>
