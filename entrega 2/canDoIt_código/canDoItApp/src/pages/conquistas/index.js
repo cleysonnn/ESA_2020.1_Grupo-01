@@ -1,21 +1,37 @@
 import React from 'react';
-import { View,Text,Image,StyleSheet } from 'react-native';
+import { View,Text,Image,TouchableOpacity } from 'react-native';
 
-import engrenagem from '../assets/engrenagem.png';
-import filtrar from '../assets/filtrar.png';
-import metaTargetUnselection from '../assets/targetUnselection.png';
-import concluidos from '../assets/concluidos.png';
-import conquistas from '../assets/conquistasBranca.png';
-import selection from '../assets/selection.png';
+import engrenagem from '../../assets/assets/engrenagem.png';
+import filtrar from '../../assets/assets/filtrar.png';
+import metaTargetUnselection from '../../assets/assets/targetUnselection.png';
+import concluidos from '../../assets/assets/concluidos.png';
+import conquistas from '../../assets/assets/conquistasBranca.png';
+import selection from '../../assets/assets/selection.png';
+import {useNavigation} from '@react-navigation/native';
+
 import styles from './style';
 
 export default function Conquistas() {
+
+    const navigation = useNavigation();
+
+    function navigateToHome(){
+        navigation.navigate('MainScreen');
+
+    }
+    function navigateToConcluidos(){
+        navigation.navigate('Concluidos');
+
+    }
+
     return (
     <View>
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.textInicial}>nome, Bem Vindo!</Text>
-                <Image source={engrenagem} style={styles.engrenagem} />
+                <TouchableOpacity>
+                    <Image source={engrenagem} style={styles.engrenagem} />
+                </TouchableOpacity>
             </View>
         </View>
 
@@ -25,8 +41,9 @@ export default function Conquistas() {
             <View style={styles.minhasMetas}>
                 <Text style={styles.textMinhasConquistas}>Minhas Conquistas  </Text> 
                 <Text style={styles.textMinhasConquistas}>(0)</Text>
-                {/* colocar um button */}
-                <Image source={filtrar} style={styles.filtrar}/>
+                <TouchableOpacity>
+                    <Image source={filtrar} style={styles.filtrar}/>
+                </TouchableOpacity>
             </View>
 
 
@@ -41,21 +58,27 @@ export default function Conquistas() {
 
             <View style ={styles.bottom}>
                 <View style={styles.viewColumn}>
-                    <Image source={metaTargetUnselection} style ={styles.metaTargetUnselection}/>
-                    <Text style ={styles.textMetas}>Metas</Text>   
+                    <TouchableOpacity onPress={()=>{navigateToHome()}}>
+                        <Image source={metaTargetUnselection} style ={styles.metaTargetUnselection}/>
+                        <Text style ={styles.textMetas}>Metas</Text> 
+                    </TouchableOpacity>
                 </View>
 
                 <View style={styles.viewConcluidos}>
-                     <Image source={concluidos} style ={styles.concluidos}/>
-                     <Text style ={styles.textConcluidos}>Concluídos</Text>
+                    <TouchableOpacity onPress={()=>{navigateToConcluidos()}}>
+                        <Image source={concluidos} style ={styles.concluidos}/>
+                        <Text style ={styles.textConcluidos}>Concluídos</Text>
+                    </TouchableOpacity>
                 </View>
                 
                 
 
                 <View style={styles.viewColumn}>
-                    <Image source={selection} style={styles.selection} />
-                    <Image source={conquistas} style ={styles.conquistas}/>
-                    <Text style ={styles.textConquistas}>Conquistas</Text>
+                    <TouchableOpacity>
+                        <Image source={selection} style={styles.selection} />
+                        <Image source={conquistas} style ={styles.conquistas}/>
+                        <Text style ={styles.textConquistas}>Conquistas</Text>
+                    </TouchableOpacity>
                 </View>
 
             </View>

@@ -8,15 +8,38 @@ import iconeDieta from '../../assets/assets/iconeDieta.png';
 import iconeFinanceiro from '../../assets/assets/iconeFinanceiro.png';
 import iconeExercicios from '../../assets/assets/iconeExercicios.png';
 import backgroundExercicios from '../../assets/assets/backgroundExercicios.png';
+import {useNavigation} from '@react-navigation/native';
 
 import styles from './style';
 
 export default function EscolhaMeta() {
+    
+    const navigation = useNavigation();
+
+    function navigateToPrevious(){
+        navigation.navigate('MainScreen');
+
+    }
+
+    function navigateToMetaVicio(){
+        navigation.navigate('CriacaoMetaVicio');
+
+    }
+    function navigateToMetaDieta(){
+        navigation.navigate('CriacaoMetaDieta');
+
+    }
+    function navigateToMetaFinanceira() {
+        navigation.navigate('CriacaoMetaFinanceira');
+    }
+    function navigateToMetaExercicio() {
+        navigation.navigate('CriacaoMetaExercicio');
+    }
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView style={styles.ScrollView}>
                 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>{navigateToPrevious()}}>
                     <Image source={arrowBack} style={styles.arrowBack}/>
                 </TouchableOpacity>
                 
@@ -38,7 +61,7 @@ export default function EscolhaMeta() {
                 
 
                 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>{navigateToMetaDieta()}}>
                         <View style={styles.viewDieta}>
                             <Image source={iconeDieta} style={styles.iconeDieta} />
                             <Text style={styles.textDieta}>Meta para Dieta</Text>
@@ -47,7 +70,7 @@ export default function EscolhaMeta() {
                 
                     
                 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>{navigateToMetaFinanceira()}}>
                         <View style={styles.viewFinanceiro}>
                             <Image source={iconeFinanceiro} style={styles.iconeFinanceiro}/>
                             <Text style={styles.textFinanceiro}>Meta Financeira</Text>

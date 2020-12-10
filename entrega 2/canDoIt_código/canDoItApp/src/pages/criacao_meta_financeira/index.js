@@ -9,25 +9,21 @@ import prosseguirBackground from '../../assets/assets/prosseguirBackground.png';
 import styles from './style';
 
 export default function MetaFinanceira() {
-    /*const unSelectedOptionIconSource = '../../assets/icones/radio/uncheckedcheck-circle.png';
-    const selectedOptionIconSource = '../../assets/icones/radio/selectedcheck-circle.png';
-
+     
     const navigation = useNavigation();
 
-    const [meta, setMeta] = React.useState ({
-        tipo: 'dieta',
-        objetivo: null,
-        quantiaEstimada: 0,
-        quantiaAtual: 0
-    });
+    function navigateToPrevious(){
+        navigation.navigate('MainScreen');
 
+    }
     function navigateToNextStep(){
-        navigation.navigate('CriacaoMetaFinanceiraII',meta);
-    }*/
+        navigation.navigate('CriacaoMetaFinanceiraII');
+
+    }
 
     return(
     <View style={styles.container}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>{navigateToPrevious()}}>
             <Image source={arrowBack} style={styles.arrowBack}/>
         </TouchableOpacity>
         
@@ -39,7 +35,7 @@ export default function MetaFinanceira() {
             <Text style={styles.textEconomizar}>Economizar</Text>
             <Text style={styles.textAcumular}>Acumular</Text>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>{navigateToNextStep()}}>
             <Image source={prosseguirBackground} style={styles.prosseguirBackground}/>
             <Text style={styles.textProsseguir}>Prosseguir</Text>
         </TouchableOpacity>

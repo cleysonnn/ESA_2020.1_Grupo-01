@@ -7,10 +7,25 @@ import target from '../../assets/assets/target.png';
 import metaTarget from '../../assets/assets/metaTarget.png';
 import concluidos from '../../assets/assets/concluidos.png';
 import conquistas from '../../assets/assets/conquistas.png';
+import {useNavigation} from '@react-navigation/native';
 
 import styles from './style';
 
 export default function MainScreen() {
+
+    const navigation = useNavigation();
+
+    function navigateToConcluidos(){
+        navigation.navigate('Concluidos');
+
+    }
+    function navigateToConquistas(){
+        navigation.navigate('Conquistas');
+
+    }
+    function navigateToEscolhaMeta() {
+        navigation.navigate('EscolhaMeta');
+    }
     return (
     <View style={styles.safearea}>
         
@@ -42,7 +57,7 @@ export default function MainScreen() {
 
             <View style={styles.mid}>
                 <Text style={styles.textMetaCriada}>Nenhuma meta criada, por favor criar uma meta no Ícone abaixo</Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>{navigateToEscolhaMeta()}}>
                     <Image source={target} style={styles.target}/>
                 </TouchableOpacity>
                 
@@ -55,7 +70,7 @@ export default function MainScreen() {
                 <Image source={metaTarget} style ={styles.metaTarget}/>
 
                 <View style={styles.viewConcluidos}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>{navigateToConcluidos()}}>
                         <Image source={concluidos} style ={styles.concluidos}/>
                         <Text style ={styles.textConcluidos}>Concluídos</Text>
                     </TouchableOpacity>
@@ -63,7 +78,7 @@ export default function MainScreen() {
                 </View>
 
                 <View style={styles.viewConcluidos}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>{navigateToConquistas()}}>
                         <Image source={conquistas} style ={styles.conquistas}/>
                         <Text style ={styles.textConquistas}>Conquistas</Text>
                     </TouchableOpacity>
