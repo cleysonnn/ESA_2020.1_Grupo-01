@@ -1,12 +1,10 @@
 import {StyleSheet} from 'react-native';
-import Constants from 'expo-constants';
 
 
 
 export default StyleSheet.create ({
     safearea:{
         flex:1,
-        marginTop: Constants.statusBarHeight,
         alignItems: 'center'
     },
 
@@ -104,6 +102,9 @@ export default StyleSheet.create ({
         left: 99,
         top: 27
     },
+    concluidosButton: {
+
+    },
 
     viewConcluidos: {
         flexDirection: "column"
@@ -112,21 +113,21 @@ export default StyleSheet.create ({
     textConcluidos: {
         fontWeight: 'bold',
         fontSize: 17,
-        top: 27,
-        left: 72
+        top: 0,
+        right: 25
 
     },
 
     conquistas: {
-        left: 137,
-        top: 27
+        left: 65,
+        top: 15
     },
 
     textConquistas: {
         fontWeight: 'bold',
         fontSize: 17,
-        top: 27,
-        left: 108
+        top: 12,
+        left: 40
 
     }
 })

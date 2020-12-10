@@ -58,7 +58,7 @@ export default function Concluidos() {
 
             <View style ={styles.bottom}>
                 <View style={styles.viewColumn}>
-                    <TouchableOpacity  onPress={()=>{navigateToHome()}}>
+                    <TouchableOpacity  style={styles.buttomMeta} onPress={()=>{navigateToHome()}}>
                         <Image source={metaTargetUnselection} style ={styles.metaTargetUnselection}/>
                         <Text style ={styles.textMetas}>Metas</Text> 
                     </TouchableOpacity>
@@ -66,7 +66,7 @@ export default function Concluidos() {
 
 
                 <View style={styles.viewColumn}>
-                    <TouchableOpacity>
+                    <TouchableOpacity style={styles.buttomConcluido}>
                         <Image source={selection} style ={styles.selection}/>
                         <Image source={concluidos} style ={styles.concluidos}/>
                         <Text style= {styles.textConcluidos}>Concluidos</Text>
@@ -75,7 +75,7 @@ export default function Concluidos() {
                 
         
                 <View style={styles.viewColumn}>
-                    <TouchableOpacity  onPress={()=>{navigateToConquistas()}}>
+                    <TouchableOpacity style ={styles.conquistas} onPress={()=>{navigateToConquistas()}}>
                         <Image source={conquistas} style ={styles.conquistas}/>
                         <Text style ={styles.textConquistas}>Conquistas</Text>
                     </TouchableOpacity>

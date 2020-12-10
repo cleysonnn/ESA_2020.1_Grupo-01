@@ -58,14 +58,14 @@ export default function Conquistas() {
 
             <View style ={styles.bottom}>
                 <View style={styles.viewColumn}>
-                    <TouchableOpacity onPress={()=>{navigateToHome()}}>
+                    <TouchableOpacity style={styles.buttomMeta} onPress={()=>{navigateToHome()}}>
                         <Image source={metaTargetUnselection} style ={styles.metaTargetUnselection}/>
                         <Text style ={styles.textMetas}>Metas</Text> 
                     </TouchableOpacity>
                 </View>
 
                 <View style={styles.viewConcluidos}>
-                    <TouchableOpacity onPress={()=>{navigateToConcluidos()}}>
+                    <TouchableOpacity style={styles.buttomConcluido} onPress={()=>{navigateToConcluidos()}}>
                         <Image source={concluidos} style ={styles.concluidos}/>
                         <Text style ={styles.textConcluidos}>Concluídos</Text>
                     </TouchableOpacity>
@@ -74,7 +74,7 @@ export default function Conquistas() {
                 
 
                 <View style={styles.viewColumn}>
-                    <TouchableOpacity>
+                    <TouchableOpacity style={styles.buttonConquistas}>
                         <Image source={selection} style={styles.selection} />
                         <Image source={conquistas} style ={styles.conquistas}/>
                         <Text style ={styles.textConquistas}>Conquistas</Text>

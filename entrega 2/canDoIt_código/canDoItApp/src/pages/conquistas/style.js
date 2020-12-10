@@ -1,5 +1,4 @@
 import {StyleSheet} from 'react-native';
-import Constants from 'expo-constants';
 
 
 
@@ -8,7 +7,6 @@ export default StyleSheet.create ({
         container: {
             flex: 1,
             alignItems: 'center',
-            marginTop: Constants.statusBarHeight,
 
         },
     
@@ -94,56 +92,61 @@ export default StyleSheet.create ({
         metaTargetUnselection: {
             height: 45,
             width: 45,
-            left: 46,
-            top: 22
         },
     
         textMetas: {
             fontWeight: 'bold',
             fontSize: 17,
-            top: 17,
-            left: 45
     
+        },
+        buttomMeta: {
+            left: 60,
+            top: 20
         },
     
         concluidos: {
             height: 38,
             width:38,
-            left: 120,
-            top: 25
+        },
+        buttomConcluido: {
+            left: 122,
+            alignItems: 'center',
+            top: 27,
         },
     
         textConcluidos: {
             fontSize: 17,
             fontWeight: 'bold',
             color:'#000',
-            top: 23,
-            left: 95
         },
     
         viewColumn: {
             flexDirection: "column"
         },
+        buttonConquistas:{
+            left: 160,
+            width:102,
+            height:65,
+            alignItems: 'center',
+            justifyContent:'center',
+            top: 50,
+        },
     
         selection: {
-            top: 20,
-            left: 125,
             height: 65,
             width: 102
     
         },
     
         conquistas: {
-            left: 160,
-            bottom: 35
+            bottom:55
         },
     
         textConquistas: {
             fontWeight: 'bold',
             color: '#ffff',
             fontSize: 17,
-            bottom: 35,
-            left: 132
+            bottom: 53
     
         }
 })

@@ -1,5 +1,4 @@
 import {StyleSheet} from 'react-native';
-import Constants from 'expo-constants';
 
 
 
@@ -8,7 +7,6 @@ export default StyleSheet.create ({
             flex: 1,
             alignItems: 'center',
             justifyContent: 'center',
-            marginTop: Constants.statusBarHeight,
         }, 
         ScrollView: {
         },  
@@ -131,15 +129,15 @@ export default StyleSheet.create ({
     
         },
         buttonLabelAdd: {
-            left: 45,
+            left: 18,
             fontSize: 20,
-            bottom: 85
+            bottom:30
     
         },
         buttonLabelRem: {
-            left: 50,
+            left: 27,
             fontSize: 20,
-            bottom: 87
+            bottom: 30
         },
         buttonBackgroundEncerrar: {
             width: 177,
@@ -148,8 +146,8 @@ export default StyleSheet.create ({
         },
         labelEncerrar: {
             fontSize: 20,
-            left: 140,
-            bottom: 139.5
+            left: 23,
+            bottom: 30
         },
         viewConquistas: {
             bottom: 90,

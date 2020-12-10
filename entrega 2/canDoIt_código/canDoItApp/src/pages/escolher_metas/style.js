@@ -1,5 +1,4 @@
 import {StyleSheet} from 'react-native';
-import Constants from 'expo-constants';
 
 
 export default StyleSheet.create ({
@@ -7,7 +6,6 @@ export default StyleSheet.create ({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: Constants.statusBarHeight,
     }, 
 
     arrowBack: {

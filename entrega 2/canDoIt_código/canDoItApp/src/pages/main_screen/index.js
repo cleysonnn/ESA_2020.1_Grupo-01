@@ -57,8 +57,8 @@ export default function MainScreen() {
 
             <View style={styles.mid}>
                 <Text style={styles.textMetaCriada}>Nenhuma meta criada, por favor criar uma meta no Ícone abaixo</Text>
-                <TouchableOpacity onPress={()=>{navigateToEscolhaMeta()}}>
-                    <Image source={target} style={styles.target}/>
+                <TouchableOpacity style={styles.target} onPress={()=>{navigateToEscolhaMeta()}}>
+                    <Image source={target}/>
                 </TouchableOpacity>
                 
             </View>    
@@ -70,15 +70,15 @@ export default function MainScreen() {
                 <Image source={metaTarget} style ={styles.metaTarget}/>
 
                 <View style={styles.viewConcluidos}>
-                    <TouchableOpacity onPress={()=>{navigateToConcluidos()}}>
-                        <Image source={concluidos} style ={styles.concluidos}/>
+                    <TouchableOpacity style={styles.concluidos} onPress={()=>{navigateToConcluidos()}}>
+                        <Image source={concluidos}/>
                         <Text style ={styles.textConcluidos}>Concluídos</Text>
                     </TouchableOpacity>
                      
                 </View>
 
                 <View style={styles.viewConcluidos}>
-                    <TouchableOpacity onPress={()=>{navigateToConquistas()}}>
+                    <TouchableOpacity style ={styles.conquistas} onPress={()=>{navigateToConquistas()}}>
                         <Image source={conquistas} style ={styles.conquistas}/>
                         <Text style ={styles.textConquistas}>Conquistas</Text>
                     </TouchableOpacity>
