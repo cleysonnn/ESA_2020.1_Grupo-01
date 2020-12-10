@@ -26,11 +26,10 @@ export default StyleSheet.create ({
     },
 
     minhasMetas: {
-        top: 10,
+        bottom: 8,
         width: 400,
         height: 80,
         flexDirection: "row",
-        backgroundColor: '#ffff'
 
     },
 

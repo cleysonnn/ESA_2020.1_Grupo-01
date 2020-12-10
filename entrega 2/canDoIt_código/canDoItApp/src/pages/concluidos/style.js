@@ -89,6 +89,11 @@ export default StyleSheet.create ({
         width: 45,
         
     },
+    buttomMeta: {
+        left: 45,
+        top: 20
+    },
+
     buttomConcluido: {
         left: 134.5,
         bottom: 42
