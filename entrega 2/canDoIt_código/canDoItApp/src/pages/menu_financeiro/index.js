@@ -3,7 +3,7 @@ import { View,Text,Image,SafeAreaView,ScrollView,TouchableOpacity } from 'react-
 
 import engrenagem from '../../assets/assets/engrenagem.png';
 import arrowBack from '../../assets/assets/arrowBackBlack.png';
-import iconeMetaFinanceira from '../../assets/assets/iconeMetaFinanceira.png';
+import iconeMetaFinanceira from '../../assets/assets/iconeDieta.png';
 import conquistasIcon from '../../assets/assets/conquistas.png';
 import statusbar from '../../assets/assets/statusbar.png';
 import formBackground from '../../assets/assets/formBackground.png';
@@ -13,12 +13,19 @@ import backgroundButtonCancelar from '../../assets/assets/backgroundButtonCancel
 import styles from './style';
 
 export default function MenuFinanceiro() {
+
+    const navigation = useNavigation();
+
+    function navigateToMainScreenCard(){
+        navigation.navigate('MainScreenCard');
+
+    }
     return (
             <SafeAreaView style={styles.container}>
                 <ScrollView style={styles.ScrollView}>
                     <View style={styles.header}>
                         <TouchableOpacity>
-                            <Image source={arrowBack} style={styles.arrowBack}/>
+                            <Image source={arrowBack} style={styles.arrowBack}  onPress={()=>{navigateToMainScreenCard()}}/>
                         </TouchableOpacity>
                         
                         <TouchableOpacity>
@@ -28,14 +35,14 @@ export default function MenuFinanceiro() {
     
                     <View style={styles.viewInicial}>
                         <Image source={iconeMetaFinanceira}/>
-                        <Text style={styles.textFinanceira}>FINANCEIRA</Text>
+                        <Text style={styles.textFinanceira}>DIETA</Text>
                         <Text style={styles.textProgresso}>PROGRESSO</Text>
                     </View>
     
                     <View style={styles.viewMid}>
                         <View style={styles.viewMidLeft}>
-                            <Text style={styles.textMidLeft}>Economizar</Text>
-                            <Text style={styles.textMidLeft}>Quantia Atual</Text>
+                            <Text style={styles.textMidLeft}>Peso estimado</Text>
+                            <Text style={styles.textMidLeft}>Peso Atual</Text>
                             
                         </View>
     

@@ -22,6 +22,7 @@ import EscolhaMeta from './pages/escolher_metas/index.js';
 import MetaFinanceira from './pages/criacao_meta_financeira/index.js';
 import MetaFinanceira2 from './pages/criacao_meta_financeiraII/index.js';
 import MenuFinanceiro from './pages/menu_financeiro/index.js';
+import MainScreenCard from './pages/main_screen_card/index.js';
 
 
 
@@ -41,6 +42,7 @@ export default function SnackScreens(){
         <Snack.Screen name='CriacaoMetaDieta' component={CriacaoMetaDieta}/>
         <Snack.Screen name='CriacaoMetaDietaII' component={CriacaoMetaDietaII}/>
         <Snack.Screen name='MenuFinanceiro' component={MenuFinanceiro}/>
+        <Snack.Screen name="MainScreenCard" component={MainScreenCard}/>
         
 
 

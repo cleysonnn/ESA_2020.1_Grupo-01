@@ -1,37 +1,42 @@
 import React from 'react';
-import { View,Text,Image,TouchableOpacity } from 'react-native';
+import { View,Text,Image,ScrollView,TouchableOpacity,SafeAreaView } from 'react-native';
 
 import engrenagem from '../../assets/assets/engrenagem.png';
 import filtrar from '../../assets/assets/filtrar.png';
-import metaTargetUnselection from '../../assets/assets/targetUnselection.png';
-import concluidos from '../../assets/assets/concluidosBranco.png';
+import target from '../../assets/assets/target.png';
+import metaTarget from '../../assets/assets/metaTarget.png';
+import concluidos from '../../assets/assets/concluidos.png';
 import conquistas from '../../assets/assets/conquistas.png';
-import selection from '../../assets/assets/selection.png';
 import {useNavigation} from '@react-navigation/native';
 
 import styles from './style';
 
-export default function Concluidos() {
+export default function MainScreen() {
 
     const navigation = useNavigation();
 
-    function navigateToHome(){
-        navigation.navigate('MainScreen');
+    function navigateToConcluidos(){
+        navigation.navigate('Concluidos');
 
     }
     function navigateToConquistas(){
         navigation.navigate('Conquistas');
 
     }
-
+    function navigateToMenuFinanceiro() {
+        navigation.navigate('MenuFinanceiro');
+    }
     return (
-    <View>
+    <View style={styles.safearea}>
+        
+        
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.textInicial}>nome, Bem Vindo!</Text>
                 <TouchableOpacity>
                     <Image source={engrenagem} style={styles.engrenagem} />
                 </TouchableOpacity>
+                
             </View>
         </View>
 
@@ -39,44 +44,40 @@ export default function Concluidos() {
            
         <View style={styles.container2}>
             <View style={styles.minhasMetas}>
-                <Text style={styles.textMetasConcluidas}>Metas Concluídas  </Text> 
-                <Text style={styles.textMetasConcluidas}>(0)</Text>
+                <Text style={styles.textMinhasMetas}>Minhas metas  </Text> 
+                <Text style={styles.textMinhasMetas}>(1)</Text>
                 <TouchableOpacity>
                     <Image source={filtrar} style={styles.filtrar}/>
                 </TouchableOpacity>
+                
             </View>
 
 
 
 
             <View style={styles.mid}>
-                <Text style={styles.textMetaConcluida}>Nenhuma meta concluída ainda</Text>
-            </View>    
+                <TouchableOpacity style={styles.target} onPress={()=>{navigateToMenuFinanceiro()}}>
+                    <Image source={card} style={styles.card}/>
+                </TouchableOpacity>
+            </View>   
         </View>
 
         <View style={styles.container3}>
 
             <View style ={styles.bottom}>
-                <View style={styles.viewColumn}>
-                    <TouchableOpacity  style={styles.buttomMeta} onPress={()=>{navigateToHome()}}>
-                        <Image source={metaTargetUnselection} style ={styles.metaTargetUnselection}/>
-                        <Text style ={styles.textMetas}>Metas</Text> 
+                <Image source={metaTarget} style ={styles.metaTarget}/>
+
+                <View style={styles.viewConcluidos}>
+                    <TouchableOpacity style={styles.concluidos} onPress={()=>{navigateToConcluidos()}}>
+                        <Image source={concluidos}/>
+                        <Text style ={styles.textConcluidos}>Concluídos</Text>
                     </TouchableOpacity>
+                     
                 </View>
 
-
-                <View style={styles.viewColumn}>
-                    <TouchableOpacity style={styles.buttomConcluido}>
-                        <Image source={selection} style ={styles.selection}/>
-                        <Image source={concluidos} style ={styles.concluidos}/>
-                        <Text style= {styles.textConcluidos}>Concluidos</Text>
-                    </TouchableOpacity>
-                </View>
-                
-        
-                <View style={styles.viewColumn}>
+                <View style={styles.viewConcluidos}>
                     <TouchableOpacity style ={styles.conquistas} onPress={()=>{navigateToConquistas()}}>
-                        <Image source={conquistas}/>
+                        <Image source={conquistas} style ={styles.conquistas}/>
                         <Text style ={styles.textConquistas}>Conquistas</Text>
                     </TouchableOpacity>
                 </View>
@@ -84,5 +85,6 @@ export default function Concluidos() {
             </View>
         </View>
     </View>
+    
     );
 }
