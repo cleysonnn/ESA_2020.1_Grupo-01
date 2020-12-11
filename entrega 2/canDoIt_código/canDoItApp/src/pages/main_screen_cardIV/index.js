@@ -26,7 +26,7 @@ export default function MainScreenCardIV() {
 
     }
     function navigateToMenuFinanceiro() {
-        navigation.navigate('MenuFinanceiro');
+        navigation.navigate('MenuFinanceiroIII');
     }
     return (
     <View style={styles.safearea}>
