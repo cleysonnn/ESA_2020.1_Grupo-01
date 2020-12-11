@@ -10,6 +10,7 @@ import iconPlus from '../../assets/assets/plusIcon.png';
 import backgroundIcon from '../../assets/assets/backgroundPlus.png';
 import styles from './style';
 import {useNavigation} from '@react-navigation/native';
+import plus from '../../assets/assets/plus.png';
 
 export default function MetaVicioPersonalizada2() {
     

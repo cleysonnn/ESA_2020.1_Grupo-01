@@ -9,6 +9,7 @@ import concluidos from '../../assets/assets/concluidos.png';
 import conquistas from '../../assets/assets/conquistas.png';
 import {useNavigation} from '@react-navigation/native';
 import card from '../../assets/assets/financeiraCard.png';
+import plus from '../../assets/assets/plus.png';
 
 
 import styles from './style';
@@ -27,6 +28,9 @@ export default function MainScreenCardII() {
     }
     function navigateToMenuFinanceiro() {
         navigation.navigate('MenuFinanceiro');
+    }
+    function navigateToEscolherMetas() {
+        navigation.navigate('EscolhaMeta');
     }
     return (
     <View style={styles.safearea}>
@@ -60,6 +64,10 @@ export default function MainScreenCardII() {
             <View style={styles.mid}>
                 <TouchableOpacity style={styles.target} onPress={()=>{navigateToMenuFinanceiro()}}>
                     <Image source={card} style={styles.card}/>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.plus} onPress={()=>{navigateToEscolherMetas()}}>
+                    <Image source={plus}/>
                 </TouchableOpacity>
             </View>   
         </View>

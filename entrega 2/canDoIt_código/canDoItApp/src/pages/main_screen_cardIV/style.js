@@ -134,5 +134,9 @@ export default StyleSheet.create ({
     card: {
         width: 380,
         height: 100
+    },
+    plus: {
+        marginTop: 215,
+        left: 140
     }
 })
