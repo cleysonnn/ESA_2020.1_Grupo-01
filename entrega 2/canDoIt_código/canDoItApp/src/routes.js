@@ -29,7 +29,7 @@ import MenuFinanceiroIV from './pages/menu_financeiroIV/index.js';
 import MainScreenCard from './pages/main_screen_card/index.js';
 import MainScreenCardII from './pages/main_screen_cardII/index.js';
 import MainScreenCardIII from './pages/main_screen_cardIII/index.js';
-import MainScreenCardIV from './pages/main_screen_cardIII/index.js';
+import MainScreenCardIV from './pages/main_screen_cardIV/index.js';
 
 import CriacaoMetaExercicio from './pages/criacao_meta_exercicio/MetaPersonalizadaExec1.js';
 import CriacaoMetaExercicioII from './pages/criacao_meta_exercicio/MetaPersonalizadaExec2.js';
