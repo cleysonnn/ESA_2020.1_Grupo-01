@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
-import arrowBack from '../assets/assetsB/buttonBack.png';
-import iconeMeta from '../assets/assetsB/metaExec.png';
-import plus from '../assets/assetsB/plus.png';
-import backgroundPlus from '../assets/assetsB/backGroundPlus.png';
+import arrowBack from '../../assets/assetsB/buttonBack.png';
+import iconeMeta from '../../assets/assetsB/metaExec.png';
+import plus from '../../assets/assetsB/plus.png';
+import backgroundPlus from '../../assets/assetsB/backGroundPlus.png';
 import {useNavigation} from '@react-navigation/native';
 
 

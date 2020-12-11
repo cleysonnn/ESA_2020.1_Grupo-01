@@ -52,7 +52,7 @@ export default function EscolhaMeta() {
                 <View style={styles.viewPrincipal}>
                
                 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>{navigateToMetaVicio()}}>
                         <View style={styles.viewVicio}>
                             <Image source={backgroundVicio} style={styles.backgroundVicio}/>   
                             <Image source={iconeVicio} style={styles.iconeVicio}/>
