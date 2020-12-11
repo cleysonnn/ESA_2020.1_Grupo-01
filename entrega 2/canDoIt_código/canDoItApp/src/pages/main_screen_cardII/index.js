@@ -27,7 +27,7 @@ export default function MainScreenCardII() {
 
     }
     function navigateToMenuFinanceiro() {
-        navigation.navigate('MenuFinanceiro');
+        navigation.navigate('MenuFinanceiroII');
     }
     function navigateToEscolherMetas() {
         navigation.navigate('EscolhaMeta');
