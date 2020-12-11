@@ -5,9 +5,17 @@ import arrowBack from '../../assets/assetsB/buttonBack.png';
 import iconeMeta from '../../assets/assetsB/MetaFinanceira.png';
 import styles from './style';
 
+import {useNavigation} from '@react-navigation/native';
 
 
 export default function MetaFinanceira() {
+
+    const navigation = useNavigation();
+
+    function navigateToNextStep(){
+        navigation.navigate('CriacaoMetaFinanceiraII');
+
+    }
 
     const unSelectedOptionIconSource = '../../assets/assetsB/unchecked.png';
     const selectedOptionIconSource = '../../assets/assetsB/selected.png';
@@ -76,7 +84,7 @@ export default function MetaFinanceira() {
 
                 </TouchableOpacity>
             </View>
-            <TouchableOpacity style={styles.buttonProsseguir}>
+            <TouchableOpacity onPress={()=>{navigateToNextStep()}} style={styles.buttonProsseguir}>
                 <Text style={styles.buttonTextProsseguir}>Prosseguir</Text>
             </TouchableOpacity>
         </View >
