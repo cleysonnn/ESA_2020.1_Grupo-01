@@ -3,7 +3,6 @@ import { View, Text, Image, StyleSheet, CheckBox, TouchableOpacity, TextInput } 
 
 import arrowBack from '../../assets/assetsB/buttonBack.png';
 import iconeMeta from '../../assets/assetsB/metaExec.png';
-import prosseguirBackground from '../assets/assetsB/backgroundProsseguirExec.png';
 import backGroundPlus from '../../assets/assetsB/backGroundPlus.png';
 import plus from '../../assets/assetsB/plus.png';
 import {useNavigation} from '@react-navigation/native';
